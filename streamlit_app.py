@@ -2,8 +2,8 @@ from PIL import Image
 import streamlit as st
 from streamlit_image_comparison import image_comparison
 
-st.set_page_config("Webb Space Telescope vs Hubble Telescope", "🔭")
-st.header("🔭 J. Webb Space Telescope vs Hubble Telescope")
+st.set_page_config("Ecolume Compost Image Comparer", "🪴")
+st.header("🪴 Ecolume Compost Image Comparer")
 
 # Upload two images
 uploaded_images = st.file_uploader("Upload two images for comparison:", type=["jpg", "png"], accept_multiple_files=True)
@@ -11,8 +11,8 @@ uploaded_images = st.file_uploader("Upload two images for comparison:", type=["j
 if uploaded_images:
     if len(uploaded_images) == 2:
         img1, img2 = uploaded_images
-        label1 = st.text_input("Label for the first image (e.g., Hubble):", "Hubble")
-        label2 = st.text_input("Label for the second image (e.g., Webb):", "Webb")
+        label1 = st.text_input("Label for the first image (e.g., Tank 1):", "Tank 1")
+        label2 = st.text_input("Label for the second image (e.g., Tank 2):", "Tank 2")
 
         # Convert the uploaded images to PIL format
         img1_pillow = Image.open(img1)
@@ -27,4 +27,4 @@ else:
 
 # Additional content (you can customize this part)
 st.write("")
-st.write("This is a reproduction of the fantastic WebbCompare app by John Christensen. It's built in Streamlit and takes only 10 lines of Python code. If you like this app, please star John's original repo!")
+st.write("This is a reproduction of the fantastic WebbCompare app by John Christensen deployed in Streamlit ! Please support his repository if you like it !")
